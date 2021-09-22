@@ -38,9 +38,9 @@
         }
 
         .card1 {
-   display: flex;
-            margin-left: 450px;
-            margin-top: -410px;
+            display: flex;
+            margin-left: 50px;
+            margin-top: -110px;
             
             
             }
@@ -54,24 +54,40 @@
             box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
             font-family: Georgia, 'Times New Roman', Times, serif;
             height: 500px;
-            width: 300px;
+            width: 700px;
             transition: 0.5s ease;
             cursor: pointer;
-            margin: 50px;
+           margin-left: 30px;
             overflow:hidden;
-            
+            margin-bottom: 100px;
             
             }
     #fe{
-    margin-left:50px;
-    margin-top: 200px;
+    margin-left:90px;
+    font-size: 30px;
+    
     }
     #be{
-    margin-left: 65px;
+    margin-left: 105px;
+    font-size: 30px;
+    
     }
     
     #ce{
-    margin-left: 35px;
+    margin-left: 80px;
+    font-size: 30px;
+   
+    }
+    #fe1{
+        font-size: 20px;
+        margin-left: 15px;
+        margin-top: 0px;
+    }
+    #fe2{
+        font-size: 20px;
+        margin-left: 15px;
+     
+       
     }
     .border1{
         margin-top: 40px;
@@ -90,6 +106,7 @@
         margin-left: 15px;
     
     }
+    
     #chart_div{
         margin-left: 330px;
         margin-top: -170px;
@@ -97,5 +114,24 @@
     #chartt_div{
         margin-left: 350px;
         margin-top: -170px;
+
+    }
+    #piechart_3d{
+       margin-top: -60px;
+       margin-left: 200px;
+       align-self: center;
+       align-content: center;
+
+    }
+
+  .container  label{
+font-size: 32px;
+
+font-family: Georgia, 'Times New Roman', Times, serif;
+margin-left: 250px;
+font-weight: 700;
+
+padding-top: 100px;
+color: #5cb4d1;
 
     }
