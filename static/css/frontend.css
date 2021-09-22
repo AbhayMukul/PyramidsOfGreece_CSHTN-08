@@ -1,0 +1,17 @@
+.border1{
+    margin-top: 40px;
+
+
+    background:rgb(230, 230, 230);
+    margin-left: 70px;
+    width : 400px;
+  
+	}
+.border1 .dashboard p{
+margin-left: 15px;
+}
+
+.border1 label{
+	margin-left: 15px;
+
+}
