@@ -34,8 +34,8 @@
 	    <div class="dashboard">
 		<br>
 		    <label style="font-size:100px;  background:#95daff; border:2px solid black">P1</label>
-		    <p style="margin-top:-100px; margin-left: 180px;"><img style="height:30px;" >Mumbai</p>
-		    <p style="margin-left: 180px;"><img style="height:30px;" >18/12/20</p><br>
+		    <p style="margin-top:-100px; margin-left: 180px;"><img style="height:25px;" src="../static/images/location_img.png">Mumbai</p>
+		    <p style="margin-left: 180px;"><img style="height:25px;" src="../static/images/dob_img.png" >18/12/20</p><br>
 		    <p>Name:</p>
 		    <p>Total number of questions attempted: </p>
 		    <p>Total number of questions attempted correctly</p><br><br>
@@ -44,6 +44,56 @@
         <div class="container">
             <h6>Course 1</h6>
             <h2>HTML</h2>
-            
+            <p>
+                A standup markup language for Web Pages
+HTML - HyperText(way in which Web pages are linked together) Markup Language(use HTML to simply "mark-up" a text document with tags that tell a Web browser how to structure it to display.)
+Eg:
+<!DOCTYPE html> → defines the document type and HTML version.
+<html> → complete HTML document and comprises of header and body
+
+   <head> → represents the document's header
+      <title>This is document title</title> → used inside the <head> tag to mention the document title.
+   </head>
+	
+   <body> →represents the document's body  
+      <h1>This is a heading</h1> → represents the heading.
+      <p>Document content goes here.....</p> →represents a para.
+   </body>
+	
+</html>
+
+Different sizes for heading given by <h1>, <h2>, <h3>, <h4>, <h5>, and <h6>
+To break a line use <br />
+List tag is shown by <li>, ordered list <ol> , unordered list <ul>
+type attribute for <ul> tag to specify the type of bullet you like.
+definition lists where entries are listed like in a dictionary or encyclopedia. <dl>− Defines the start of the list,<dt> − A term, <dd> − Term definition
+An attribute is used to define the characteristics of an HTML element and is placed inside the element's opening tag. 2 parts - a name(property you want to set) and value(what you want the value of the property to be set within “”).
+Core attributes - id(uniquely identify any element), title(gives a suggested title for the element), class(associates an element with a style sheet, and specifies the class of element), style(allows you to specify CSS rules within the element.)
+Bold - <b></b>, Italic - <i></i>, underlined - <u></u>
+Meta Tags(<meta>)- used to provide such additional information. Placed inside header.
+Name - Name for the property
+Content -Specifies the property's value.
+Scheme - Specifies a scheme to interpret the property's value
+http-equiv-Used for http response message headers(eg: refresh a page)
+E.g:<meta name = "keywords" content = "HTML, Meta Tags, Metadata" />,
+<meta http-equiv = "refresh" content = "5" />
+Comments syntax - <!-- ... →
+<!-- This is valid comment -->,< !--   This is not a valid comment -->
+To insert an image - <img src = "Image URL" ... attributes-list/>
+Eg:<img src = "/html/images/test.png" alt ="Test Image"/>
+ alt attribute- mandatory attribute which specifies an alternate text for an image, if the image cannot be displayed.
+Tables - <table>, Tabel row- <tr> , data cells in table- <td>, border attribute puts border around the table.Table heading-<th>
+colspan attribute if you want to merge two or more columns into a single column. rowspan if you want to merge two or more rows.
+Anchor Tag- <a>,eg: <a href = "https://www.e-learning.com" target = "_self">E-learning</a>
+The <div> element is a block level element used for grouping HTML elements. While the <div> tag is a block-level element, the HTML <span> element is used for grouping elements at an inline level.
+Eg:<div style = "width:100%">
+<iframe> tag defines a rectangular region within the document in which the browser can display a separate document, including scrollbars and borders.
+Eg:<iframe src = "/html/menu.htm" width = "555" height = "200">Sorry your browser does not support inline frames.</iframe>
+<span> is an inline element and it can be used to group inline-elements in an HTML document.
+The HTML <form> tag is used to create an HTML form and it has following syntax −<form action = "Script URL" method = "GET|POST">form elements like input, textarea etc.</form>
+
+            </p>
 
         </div>
+        </body>
+        </html>
