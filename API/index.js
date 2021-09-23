@@ -27,6 +27,18 @@ db.connect((err) => {
     }
 })
 
+app.get('/api/get', (req, res) => {
+    let sql = `SELECT * FROM LOGIN_DETAILS;
+                `;
+
+    db.query(sql, (err, result) => {
+        if (err) {
+            console.log(err);
+        }
+        res.send(result);
+    })
+})
+
 app.post('/api/uploadUser' , (req,res) => {
     
     let sqlCheckAccountFree = ` SELECT EXISTS
