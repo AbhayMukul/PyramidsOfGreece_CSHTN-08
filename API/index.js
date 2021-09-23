@@ -19,6 +19,13 @@ app.all('*', function(req, res, next) {
  
  app.use(express.static(environmentRoot + '/public'));
 
+const corsOptions ={
+    origin:'ec2-3-109-123-120.ap-south-1.compute.amazonaws.com:5000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
+
 var db = mysql.createConnection({
     host: "database-3.cxaqyyfsqya9.ap-south-1.rds.amazonaws.com",
     user: "admin",
