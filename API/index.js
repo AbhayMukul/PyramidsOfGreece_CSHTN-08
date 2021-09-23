@@ -18,15 +18,6 @@ var db = mysql.createConnection({
     database: "E_Learning"
 });
 
-function isEmpty(obj) {
-    for (var key in obj) {
-        if (obj.hasOwnProperty(key))
-            return false;
-    }
-    return true;
-}
-
-// check db connection
 db.connect((err) => {
     if (err) {
         console.log(err);
@@ -34,38 +25,6 @@ db.connect((err) => {
     else {
         console.log("database conected");
     }
-})
-
-app.get('/api', (req, res) => {
-    res.send("API working")
-})
-
-app.get('/api/get', (req, res) => {
-    let sql = `SELECT * FROM QUESTION_DEATILS;
-                `;
-
-    db.query(sql, (err, result) => {
-        if (err) {
-            console.log(err);
-        }
-        res.send(result);
-    })
-})
-
-app.get('/api/getUserProgress', (req, res) => {
-    let sql = `SELECT * FROM USER_PROGRESS
-                WHERE username = ${req.body.username};
-                `;
-
-    db.query(sql, (err, result) => {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            res.send(result);
-        }
-    })
-
 })
 
 app.post('/api/uploadUser' , (req,res) => {
@@ -113,3 +72,23 @@ app.post('/api/uploadUser' , (req,res) => {
         }
     })
 } )
+
+app.get('/api/login',(req,res) => {
+    let sql = `SELECT password FROM LOGIN_DETAILS
+                WHERE username = '${req.body.username}';
+                `;
+
+    db.query(sql , (err,result) => {
+        if(err){
+            console.log(err);
+        }else{
+            var JSONString = JSON.parse(JSON.stringify(result[0]));
+            
+            if(req.body.password == JSONString.password){
+                res.send("logged-in");
+            }else{
+                res.send("wrong password");
+            }
+        }
+    })
+})
