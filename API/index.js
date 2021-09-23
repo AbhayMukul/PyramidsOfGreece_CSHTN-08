@@ -11,20 +11,11 @@ app.listen('5000', () => {
     console.log('server running at port 5000');
 });
 
-// app.all('*', function(req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//     next();
-//  });
- 
-//  app.use(express.static(environmentRoot + '/public'));
-
-const corsOptions ={
-    origin:'ec2-3-109-123-120.ap-south-1.compute.amazonaws.com:5000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 var db = mysql.createConnection({
     host: "database-3.cxaqyyfsqya9.ap-south-1.rds.amazonaws.com",
@@ -54,66 +45,66 @@ app.get('/api/get', (req, res) => {
     })
 })
 
-app.post('/api/uploadUser' , (req,res) => {
-    
+app.post('/api/uploadUser', (req, res) => {
+
     let sqlCheckAccountFree = ` SELECT EXISTS
                 (SELECT * FROM LOGIN_DETAILS 
                     where username = '${req.body.username}') 
                 AS EXIST; 
-                `; 
+                `;
 
-    db.query(sqlCheckAccountFree,(err,result) => {
-        if(err) {
+    db.query(sqlCheckAccountFree, (err, result) => {
+        if (err) {
             console.log(err);
-        }else{
+        } else {
             // res.send(result);
             var exists = JSON.parse(JSON.stringify(result[0]));
 
-            if(parseInt(exists.EXIST) == 0){
+            if (parseInt(exists.EXIST) == 0) {
                 // user doesnt exist
                 let sql_LoginDetails = ` INSERT INTO LOGIN_DETAILS
                                          VALUES ('${req.body.username}','${req.body.password}');
-                                         `; 
+                                         `;
 
                 let sql_UserDetails = ` INSERT INTO USER_DETAILS
                                          VALUES ('${req.body.username}','${req.body.email}','${req.body.phone}')
                                          `;
-    
-                db.query(sql_LoginDetails,(err,result) => {
-                    if(err){
+
+                db.query(sql_LoginDetails, (err, result) => {
+                    if (err) {
                         console.log(err);
-                    }else{
-                        db.query(sql_UserDetails,(err,result) => {
-                            if(err){
+                    } else {
+                        db.query(sql_UserDetails, (err, result) => {
+                            if (err) {
                                 console.log(err);
-                            }else{
+                            } else {
                                 res.send("uploaded");
                             }
                         })
                     }
                 })
-            }else if (parseInt(exists.EXIST) == 1){
+            } else if (parseInt(exists.EXIST) == 1) {
                 // username taken
                 res.send("username not free")
             }
         }
     })
-} )
+})
 
-app.get('/api/login',(req,res) => {
+app.get('/api/login', (req, res) => {
     let sql = `SELECT password FROM LOGIN_DETAILS
                 WHERE username = '${req.body.username}';
                 `;
 
-    db.query(sql , (err,result) => {
-        if(err){
+    db.query(sql, (err, result) => {
+        if (err) {
             console.log(err);
-        }else{
+        } else {
             var JSONString = JSON.parse(JSON.stringify(result[0]));
-            
-            if(req.body.password == JSONString.password){
+
+            if (req.body.password == JSONString.password) {
                 res.send("logged-in");
-            }else{
+            } else {
                 res.send("wrong password");
             }
         }
