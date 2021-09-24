@@ -6,16 +6,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
-    <link rel="stylesheet" type="text/css" href="CSS/signup.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/signup.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript" src="JS/signup.js"></script>
+        <script>
+  
+            function validateForm()
+        {
+            var username=document.getElementById("username");
+            var email=document.getElementById("email");
+            var mobile=document.getElementById("mobile");
+            var password=document.getElementById("password");
+            var confirmpassword=document.getElementById("confirmpassword");
+        
+            if(username.value.trim()=="" && email.value.trim()=="" && mobile.value.trim()=="" && password.value.trim()=="" && confirmpassword.value.trim()=="")
+            {
+                alert("No blank values allowed");
+                return false;	
+            }
+            else
+            {
+                true;
+            }
+          
+
+            var password=document.getElementById("password").value;
+            var confirmpassword=document.getElementById("confirmpassword").value;
+            if(password!=confirmpassword){  
+       
+        alert("password must be same!");  
+        return false;  
+            }
+            var username=document.getElementById("username").value;
+if(signup.username.value.length < 6) 
+{
+        alert("Error: Username must contain at least six characters!");
+        signup.username.focus();
+        return false;
+      }  
+  
+        
+ var email = document.getElementById('email');
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+if (!filter.test(email.value)) {
+alert('Please provide a valid email address');
+email.focus;
+return false;
+}
+var password=document.getElementById("password").value;
+if(signup.password.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        signup.password.focus();
+        return false;
+      }  
+  
+    var y = document.signup.mobile.value;
+      if(isNaN(y)||y.indexOf(" ")!=-1)
+           {
+              alert("Enter numeric value")
+              return false; 
+           }
+           if (y.length>10)
+           {
+                alert("enter 10 characters");
+                return false;
+           }
+           
+        }  
+
+      </script>
+
+
 </head>
 
 <body>
     <div class="topnav">
-        <a class="active" href="/">Home</a>
+        <a class="active" href="home.html">Home</a>
         <a href="#aboutus">About Us</a>
         <a href="#contactus">Contact Us</a>
         <div class="dropdown">
@@ -23,38 +91,36 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="/category">Frontend</a>
-                <a href="/categorybackend">Backend</a>
-                <a href="/categoryconn">Connectivity</a>
+                <a href="category.html">Frontend</a>
+                <a href="categorybackend.html">Backend</a>
+                <a href="catergoryconn.html">Connectivity</a>
             </div>
         </div>
-        <a href="/progress">Progress</a>
-      <a href="/login">Login</a>
+        <a href="progress.html">Progress</a>
+      <a href="login.html">Login</a>
       </div>
     <div class="signup_background">
 
         <div class="signup_container">
             <h1>SIGN UP</h1>
-            <form action="/signup" name="signup" id="signup" method="POST" onsubmit="return validateForm()">
+            <form name="signup" id="signup" method="POST" onsubmit="return validateForm()">
                 <label>Username</label><br>
-                <center><input type="text" placeholder="Enter your username" required id = "username"name="username"></center><br>
+                <center><input type="text" placeholder="Enter your username"  id = "username"name="username"></center><br>
                 <label>Email</label><br>
-                <center><input type="text" placeholder="Enter your email" required id = "email" name="email"></center><br>
+                <center><input type="text" placeholder="Enter your email"  id = "email" name="email"></center><br>
                 <label>Mobile number</label><br>
-                <center><input type="text" placeholder="Enter your phone" required id= "mobile" name="mobile"></center><br>
+                <center><input type="text" placeholder="Enter your phone"  id= "mobile" name="mobile"></center><br>
                 <label>Password</label><br>
-                <center><input type="password" placeholder="Enter password" required id = "password" name="password"></center><br>
+                <center><input type="password" placeholder="Enter password"  id = "password" name="password"></center><br>
                 <label>Confirm Password</label><br>
-                <center><input type="password" placeholder="Confirm Password" required id = "confirmpassword" name = "confirmpassword"></center><br>
+                <center><input type="password" placeholder="Confirm Password" id = "confirmpassword" name = "confirmpassword"></center><br>
              
                 <center>
-                    <p>Already have an account?<a href="/login">Login</a></p>
+                    <p>Already have an account?<a href="login.html">Login</a></p>
                 </center>
                 <center><button type="submit">Sign Up</button></center>
             </form>
         </div>
     </div>
 </body>
-
-
 </html>
