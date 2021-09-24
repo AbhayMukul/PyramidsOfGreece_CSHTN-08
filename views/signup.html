@@ -22,7 +22,7 @@
         
             if(username.value.trim()=="" && email.value.trim()=="" && mobile.value.trim()=="" && password.value.trim()=="" && confirmpassword.value.trim()=="")
             {
-                alert("No blank values allowed");
+                alert("Error: No field should be empty");
                 return false;	
             }
             else
@@ -35,7 +35,7 @@
             var confirmpassword=document.getElementById("confirmpassword").value;
             if(password!=confirmpassword){  
        
-        alert("password must be same!");  
+        alert("Error: Password doesnot matches");  
         return false;  
             }
             var username=document.getElementById("username").value;
@@ -65,12 +65,12 @@ if(signup.password.value.length < 6) {
     var y = document.signup.mobile.value;
       if(isNaN(y)||y.indexOf(" ")!=-1)
            {
-              alert("Enter numeric value")
+              alert("Error:Enter numeric value")
               return false; 
            }
            if (y.length>10)
            {
-                alert("enter 10 characters");
+                alert("Error: Enter 10 characters");
                 return false;
            }
            
