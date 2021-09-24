@@ -91,10 +91,12 @@ app.post('/api/uploadUser', (req, res) => {
     })
 })
 
-app.get('/api/login', (req, res) => {
+app.get('/api/login/:username&:password', (req, res) => {
     let sql = `SELECT password FROM LOGIN_DETAILS
-                WHERE username = '${req.body.username}';
+                WHERE username = '${req.params.username}';
                 `;
+
+    console.log(req.params.username,req.params.password);
 
     db.query(sql, (err, result) => {
         if (err) {
@@ -102,7 +104,7 @@ app.get('/api/login', (req, res) => {
         } else {
             var JSONString = JSON.parse(JSON.stringify(result[0]));
 
-            if (req.body.password == JSONString.password) {
+            if (req.params.password == JSONString.password) {
                 res.send("logged-in");
             } else {
                 res.send("wrong password");
