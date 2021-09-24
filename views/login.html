@@ -9,43 +9,38 @@
     <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../static/css/login.css">
     <script>
-        function validateForm()
-        {
-            var username=document.getElementById("username");
-       
-            var password=document.getElementById("password");
-           
-            if(username.value.trim()=="" && password.value.trim()=="") {
-                
+        function validateForm() {
+            var username = document.getElementById("username");
+
+            var password = document.getElementById("password");
+
+            if (username.value.trim() == "" && password.value.trim() == "") {
+
                 alert("Error: Username and Password should be entered");
-                return false;	
+                return false;
             }
-            else
-            {
+            else {
                 true;
             }
-            
-        
-            if(username.value.trim()=="") 
-            {
+
+
+            if (username.value.trim() == "") {
                 alert("Error: Username should not be empty");
-                return false;	
+                return false;
             }
-            else
-            {
+            else {
                 true;
             }
-           if(password.value.trim()==""){
-          
-            
+            if (password.value.trim() == "") {
+
+
                 alert("Error: Password should not be empty");
-                return false;	
+                return false;
             }
-            else
-            {
+            else {
                 true;
             }
-           
+
         }
     </script>
 </head>
@@ -66,16 +61,17 @@
             </div>
         </div>
         <a href="progress.html">Progress</a>
-      <a href="login.html">Login</a>
-      </div>
+        <a href="login.html">Login</a>
+    </div>
     <div class="login_background">
         <div class="login_container">
             <h1>LOGIN</h1><br>
-            <form method="POST"  onsubmit="return validateForm()">
+            <form method="POST" onsubmit="return validateForm()">
                 <label>Username</label><br>
-                <center><input type="text" id ="username" placeholder="Enter your username"  name="username" ></center><br><br>
+                <center><input type="text" id="username" placeholder="Enter your username" name="username"></center>
+                <br><br>
                 <label>Password</label><br>
-                <center><input type="password" id = "password" placeholder="Enter password" name="password"></center><br>
+                <center><input type="password" id="password" placeholder="Enter password" name="password"></center><br>
                 <center>
                     <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
                 </center>
@@ -83,7 +79,7 @@
             </form>
         </div>
     </div>
-  
+
 </body>
 
 </html>
