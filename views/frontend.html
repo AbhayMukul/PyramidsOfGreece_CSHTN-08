@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/frontend.css">
+    <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/frontend.css">
 
 </head>
 
   
 <body>
     <div class="topnav">
-        <a class="active" href="home.html">Home</a>
+        <a class="active" href="/">Home</a>
         <a href="#aboutus">About Us</a>
         <a href="#contactus">Contact Us</a>
         <div class="dropdown">
@@ -22,78 +22,50 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="category.html">Frontend</a>
-                <a href="category.html">Backend</a>
-                <a href="category.html">Connectivity</a>
+                <a href="/category">Frontend</a>
+                <a href="/categorybackend">Backend</a>
+                <a href="/categoryconn">Connectivity</a>
             </div>
         </div>
-        <a href="#about">Progress</a>
-      <a href="login.html">Login</a>
+        <a href="/progress">Progress</a>
+      <a href="/login">Login</a>
       </div>
-      <div class="border1">
-	    <div class="dashboard">
-		<br>
-		    <label style="font-size:100px;  background:#95daff; border:2px solid black">P1</label>
-		    <p style="margin-top:-100px; margin-left: 180px;"><img style="height:25px;" src="../static/images/location_img.png">Mumbai</p>
-		    <p style="margin-left: 180px;"><img style="height:25px;" src="../static/images/dob_img.png" >18/12/20</p><br>
-		    <p>Name:</p>
-		    <p>Total number of questions attempted: </p>
-		    <p>Total number of questions attempted correctly</p><br><br>
-	    </div>
-        </div>
+     
         <div class="container">
-            <h6>Course 1</h6>
-            <h2>HTML</h2>
-            <p>
-                A standup markup language for Web Pages
-HTML - HyperText(way in which Web pages are linked together) Markup Language(use HTML to simply "mark-up" a text document with tags that tell a Web browser how to structure it to display.)
-Eg:
-<!DOCTYPE html> → defines the document type and HTML version.
-<html> → complete HTML document and comprises of header and body
+            <h2 id="ht">Basics of HTML</h2>
+       
+       
+        <p style="text-align: center; font-size: 25px; margin-top: -20px;">
+            A standup markup language for Web Pages
+HTML - HyperText Markup Language
+</p>
+<p id="tags" >Basic html tags:</p>
+<img src="Images/frontend.png" id="form"style="width: 900px; margin-left: 170px; border: 2px solid black;">
+</div>
+<br><br>
 
-   <head> → represents the document's header
-      <title>This is document title</title> → used inside the <head> tag to mention the document title.
-   </head>
-	
-   <body> →represents the document's body  
-      <h1>This is a heading</h1> → represents the heading.
-      <p>Document content goes here.....</p> →represents a para.
-   </body>
-	
+
+  <p id="formhead" >Forms and Input Tags</p>
+  <img src="Images/form.png" id="form"style="width: 900px; margin-left: 200px; border: 2px solid black;">
+  <img src="Images/form2.png" id="form2" style="width: 900px; margin-left: 200px; border: 2px solid black; margin-top: -7px;">
+</div>
+<br>
+
+<p id="links">Links</p>
+<img src="Images/links.png" id="link"style="width: 900px; margin-left: 200px; border: 2px solid black;">
+<p id="list">Lists</p>
+<img src="Images/list.png" id="list"style="width: 900px; margin-left: 200px; border: 2px solid black;">
+<p id="list">Tables</p>
+<img src="Images/tables.png" id="list"style="width: 900px; margin-left: 200px; border: 2px solid black;  margin-bottom: 60px;">
+<br>
+<p id="othert">Other important HTML tags</p>
+<p id="heading">The  <img src="Images/imagetag.png" alt="h2" style="height: 16px; width: 50px; ">tag is used to embed an image in an HTML page.</p>
+<p id="heading1">The  <img src="Images/styl.png" alt="h2" style="height: 14px; width: 60px; ">tag is used to define style information (CSS) for a document.</p>
+<p id="heading2">The <img src="Images/script.png" alt="h2" style="height: 14px; width: 60px; ">tag is used to embed a client-side script (JavaScript).</p>
+<p id="heading3">The <img src="Images/div.png" alt="h2" style="height: 14px; width: 40px; ">tag defines a division or a section in an HTML document.</p>
+<p id="heading4">The <img src="Images/span.png" alt="h2" style="height: 14px; width: 60px; ">tag is an inline container used to mark up a part of a text, or a part of a document.</p>
+<p id="heading5">The <img src="Images/header.png" alt="h2" style="height: 14px; width: 80px; ">element represents a container for introductory content or a set of navigational links.</p>
+<p id="heading6">The <img src="Images/footer.png" alt="h2" style="height: 14px; width: 80px; ">tag defines a footer for a document or section.</p>
+<p id="heading7">The <img src="Images/section.png" alt="h2" style="height: 14px; width: 80px; ">tag defines a section in a document.</p>
+</body>
 </html>
-
-Different sizes for heading given by <h1>, <h2>, <h3>, <h4>, <h5>, and <h6>
-To break a line use <br />
-List tag is shown by <li>, ordered list <ol> , unordered list <ul>
-type attribute for <ul> tag to specify the type of bullet you like.
-definition lists where entries are listed like in a dictionary or encyclopedia. <dl>− Defines the start of the list,<dt> − A term, <dd> − Term definition
-An attribute is used to define the characteristics of an HTML element and is placed inside the element's opening tag. 2 parts - a name(property you want to set) and value(what you want the value of the property to be set within “”).
-Core attributes - id(uniquely identify any element), title(gives a suggested title for the element), class(associates an element with a style sheet, and specifies the class of element), style(allows you to specify CSS rules within the element.)
-Bold - <b></b>, Italic - <i></i>, underlined - <u></u>
-Meta Tags(<meta>)- used to provide such additional information. Placed inside header.
-Name - Name for the property
-Content -Specifies the property's value.
-Scheme - Specifies a scheme to interpret the property's value
-http-equiv-Used for http response message headers(eg: refresh a page)
-E.g:<meta name = "keywords" content = "HTML, Meta Tags, Metadata" />,
-<meta http-equiv = "refresh" content = "5" />
-Comments syntax - <!-- ... →
-<!-- This is valid comment -->,< !--   This is not a valid comment -->
-To insert an image - <img src = "Image URL" ... attributes-list/>
-Eg:<img src = "/html/images/test.png" alt ="Test Image"/>
- alt attribute- mandatory attribute which specifies an alternate text for an image, if the image cannot be displayed.
-Tables - <table>, Tabel row- <tr> , data cells in table- <td>, border attribute puts border around the table.Table heading-<th>
-colspan attribute if you want to merge two or more columns into a single column. rowspan if you want to merge two or more rows.
-Anchor Tag- <a>,eg: <a href = "https://www.e-learning.com" target = "_self">E-learning</a>
-The <div> element is a block level element used for grouping HTML elements. While the <div> tag is a block-level element, the HTML <span> element is used for grouping elements at an inline level.
-Eg:<div style = "width:100%">
-<iframe> tag defines a rectangular region within the document in which the browser can display a separate document, including scrollbars and borders.
-Eg:<iframe src = "/html/menu.htm" width = "555" height = "200">Sorry your browser does not support inline frames.</iframe>
-<span> is an inline element and it can be used to group inline-elements in an HTML document.
-The HTML <form> tag is used to create an HTML form and it has following syntax −<form action = "Script URL" method = "GET|POST">form elements like input, textarea etc.</form>
-
-            </p>
-
-        </div>
-        </body>
-        </html>

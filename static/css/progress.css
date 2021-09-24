@@ -44,6 +44,25 @@
             
             
             }
+            .copyright
+{
+overflow: hidden;
+padding: 3em 0em;
+text-align: center;
+background:white;
+}
+.copyright p
+{
+letter-spacing: 1px;
+font-size: 0.90em;
+color: black;
+}
+.copyright a
+{
+text-decoration: none;
+color: black;
+}
+
 
         .card-text1 {
             display: grid;
@@ -121,6 +140,7 @@
        margin-left: 200px;
        align-self: center;
        align-content: center;
+    
 
     }
 

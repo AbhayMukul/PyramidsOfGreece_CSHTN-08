@@ -41,6 +41,7 @@
     border-radius: 10px;
     color: #270101;
     font-size: 19px;
+    margin-left: -65px;
 }
 
 .login_container input::placeholder{
