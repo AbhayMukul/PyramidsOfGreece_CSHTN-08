@@ -9,9 +9,11 @@ class Challanges extends BaseController
 
 	public function index()
 	{   
-		$challanges = new ChallangesModel();
-		$data['challenges_list'] = $challanges->get_challenges_backend();
 		return view('challanges',$data);
 	}	
+
+	public function category(){
+		return view("category");
+	}
 
 }

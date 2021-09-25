@@ -7,42 +7,40 @@ class Compiler extends BaseController
 	//fetches code from file
 	public function index()
 	{
-		
-$filePath = $_POST['path'];
-$filePath = ltrim($filePath, '/');
-/*
+		$link = new mysqli("localhost","root","","code_editor");
+$language = strtolower($_POST['language']);
+$code = $_POST['code'];
+foreach($arr as $pat){
+if(preg_match($pat, $code)){
+	exit("you are not allowed to import ".$pat." package");
+}
+}
+$random = substr(md5(mt_rand()),0,7);
+if($_POST['path']==NULL){
+$random = substr(md5(mt_rand()),0,7);
+
+//code to create temp file
+$filePath = $_SERVER['DOCUMENT_ROOT']."/code_editor/app/tmp/".$random.".py";
+//$input = $_POST['input'];
 $programFile = fopen($filePath,"w");
 fwrite($programFile,$code);
 fclose($programFile);
-*/
-//$output=shell_exec("python ".$_SERVER['DOCUMENT_ROOT'].'/code_editor/app/'. $filePath." 2>&1");
-$filePath = "tmp/output.txt";
-$programFile = fopen($filePath,"w");
-fwrite($programFile);
-fclose($programFile);
-//print_r($output);
-*/
-// code to accept inputs
-	define('STDIN',fopen("php://stdin","r"));
-$descriptorspec = array(
-		0 => array("pipe","r"),
-		1 => array("pipe","w"),
-		2 => array("file",$_SERVER['DOCUMENT_ROOT']."/code_editor/tmp/error.log","a")
-) ;
- 
-	$process = proc_open('python "'.$filePath.'"',$descriptorspec, $pipes);
 
-	print fgets($pipes[1]);
-	$p = $_POST['input'];
-	if (is_resource($process)) {
-		fwrite($pipes[0], $p);
-		fclose($pipes[0]);
-	
-		print_r(stream_get_contents($pipes[1]));
-	
-		fclose($pipes[1]);
+}
+else{
+	$file_tmp_path = mysqli_real_escape_string($link,$_POST['path']);
+	$file_tmp_path = ltrim($file_tmp_path, '/');
+	$filePath = $_SERVER['DOCUMENT_ROOT']."/code_editor/code/".$file_tmp_path;
+}
 
-		proc_close($process);
-		}
+$file_input = "tmp/".$random.".txt";
+$program_input = fopen($file_input,"w");
+fwrite($program_input,$_POST['input']);
+		fclose($program_input);
+
+		$output=shell_exec("python ".$filePath." <".$_SERVER['DOCUMENT_ROOT'].'/code_editor/app/'. $file_input." 2>&1");
+
+		print_r($output);
+		return $output;
 	}	
 }
