@@ -1,0 +1,239 @@
+
+
+.border1{
+    margin-top: 40px;
+
+
+    background:rgb(230, 230, 230);
+    margin-left: 70px;
+    width : 400px;
+  
+	}
+.border1 .dashboard p{
+margin-left: 15px;
+}
+
+.border1 label{
+	margin-left: 15px;
+
+}
+  
+  .dropdown-content a {
+    float: none;
+ 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color:white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.container {
+		position:relative;
+		left:0px;
+	
+                font-size:20px;
+		padding:30px;
+             
+		
+		
+}
+#course{
+ 
+    margin-top: 20px;
+    font-size: 25px;
+
+}
+#ht{
+    
+    font-size: 50px;
+    text-align: center;
+    color: #000c66;
+}
+#tags{
+    font-size: 35px;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 40px;
+}
+#heading{
+    margin-top: px;
+    margin-left: 200px;
+padding-top: 20px;
+    width: 900px;
+    height: 52px;
+ border: 2px solid black;
+ padding-left: 5px;
+ text-align: center;
+}
+#heading1{
+   margin-top: -20px;
+    margin-left: 200px;
+    width: 900px;
+    height: 52px;
+ border: 2px solid black;
+ padding-left: 5px;
+ text-align: center;
+ padding-top: 20px;
+ 
+
+}
+#heading2{
+    margin-top: -20px;
+    margin-left: 200px;
+    width: 900px;
+    height: 52px;
+ border: 2px solid black;
+ padding-left: 5px;
+ text-align: center;
+ padding-top: 20px;
+ 
+}
+#othert{
+    font-size: 35px;
+    text-decoration: underline;
+    text-align: center;
+   margin-top: -7px;
+  
+}
+#heading4{
+    margin-top: -20px;
+    margin-left: 200px;
+    width: 900px;
+    height: 52px;
+ border: 2px solid black;
+ padding-left: 5px;
+ margin-bottom: 20px;
+ text-align: center;
+ padding-top: 20px;
+ 
+}
+#heading5{
+    margin-top: -20px;
+    margin-left: 200px;
+    width: 900px;
+    height: 52px;
+ border: 2px solid black;
+ padding-left: 5px;
+ margin-bottom: 20px;
+ text-align: center;
+ padding-top: 20px;
+ 
+}
+#heading6{
+    margin-top: -20px;
+    margin-left: 200px;
+    width: 900px;
+    height: 52px;
+ border: 2px solid black;
+ padding-left: 5px;
+ margin-bottom: 20px;
+ text-align: center;
+ padding-top: 20px;
+ 
+}
+#heading7{
+    margin-top: -20px;
+    margin-left: 200px;
+    width: 900px;
+    height: 52px;
+ border: 2px solid black;
+ padding-left: 5px;
+ margin-bottom: 20px;
+ text-align: center;
+ padding-top: 20px;
+ 
+}
+#heading3{
+    margin-top: -20px;
+    margin-left: 200px;
+    width: 900px;
+    height: 52px;
+ border: 2px solid black;
+ padding-left: 5px;
+ margin-bottom: 20px;
+ text-align: center;
+ padding-top: 20px;
+ 
+}
+#br{
+    margin-left: 50px;
+    border: 2px solid black;
+ text-align: center;
+ height: 26px;
+ width: 300px;
+}
+#formhead{
+    font-size: 35px;
+    text-decoration: underline;
+    text-align: center;
+    margin-top:-7px;
+  
+}
+.copyright
+{
+overflow: hidden;
+padding: 3em 0em;
+text-align: center;
+background: #333;
+}
+.copyright p
+{
+letter-spacing: 1px;
+font-size: 0.90em;
+color: white;
+}
+.copyright a
+{
+text-decoration: none;
+color: white;
+}
+
+
+
+#links{
+    font-size: 35px;
+    text-decoration: underline;
+    text-align: center;
+}
+#list{
+    font-size: 35px;
+    text-decoration: underline;
+    text-align: center;
+}
+.con2{
+position:relative;
+
+top:-400px;
+left:-50px;
+
+padding:50px;
+font-size:20px;
+
+}
+
+.con3
+{
+font-size:20px;
+
+
+}
+
+.con4
+{
+font-size:20px;
+right:800px;
+}
+.con5
+{
+font-size:20px;
+margin-left: 500PX;
+
+
+}

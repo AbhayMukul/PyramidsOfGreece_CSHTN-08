@@ -1,0 +1,157 @@
+.card {
+   
+    margin-left: 450px;
+    margin-top: -410px;
+    
+    
+    }
+    .card-text {
+    display: grid;
+    grid-template-columns: 300px;
+    
+    
+    background:#b8e9fa ;
+    border-radius: 18px;
+   
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 370px;
+    width: 700px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 50px;
+    overflow:hidden;
+    
+    
+    }
+    #te{
+    margin-top: 30px;
+    font-size: 20px;
+    margin-left: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #tec{
+        margin-top: 10px;
+        font-size: 20px;
+        margin-left: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .card1 {
+            display: flex;
+            margin-left: 40px;
+            margin-top: -110px;
+            
+            
+            }
+            .copyright
+{
+overflow: hidden;
+padding: 3em 0em;
+text-align: center;
+background:white;
+}
+.copyright p
+{
+letter-spacing: 1px;
+font-size: 0.90em;
+color: black;
+}
+.copyright a
+{
+text-decoration: none;
+color: black;
+}
+
+
+        .card-text1 {
+            display: grid;
+            grid-template-columns: 300px;
+            background:#b8e9fa ;
+            border-radius: 18px;
+           
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            height: 500px;
+            width: 700px;
+            transition: 0.5s ease;
+            cursor: pointer;
+           margin-left: 30px;
+            overflow:hidden;
+            margin-bottom: 100px;
+            
+            }
+    #fe{
+    margin-left:90px;
+    font-size: 30px;
+    
+    }
+    #be{
+    margin-left: 105px;
+    font-size: 30px;
+    
+    }
+    
+    #ce{
+    margin-left: 80px;
+    font-size: 30px;
+   
+    }
+    #fe1{
+        font-size: 20px;
+        margin-left: 15px;
+        margin-top: 0px;
+    }
+    #fe2{
+        font-size: 20px;
+        margin-left: 15px;
+     
+       
+    }
+    .border1{
+        margin-top: 40px;
+    
+    
+        background:rgb(230, 230, 230);
+        margin-left: 70px;
+        width : 400px;
+      
+        }
+    .border1 .dashboard p{
+    margin-left: 15px;
+    }
+    
+    .border1 label{
+        margin-left: 15px;
+    
+    }
+    
+    #chart_div{
+        margin-left: 330px;
+        margin-top: -170px;
+    }
+    #chartt_div{
+        margin-left: 350px;
+        margin-top: -170px;
+
+    }
+    #piechart_3d{
+       margin-top: -60px;
+       margin-left: 200px;
+       align-self: center;
+       align-content: center;
+    
+
+    }
+
+  .container  label{
+font-size: 32px;
+
+font-family: Georgia, 'Times New Roman', Times, serif;
+margin-left: 250px;
+font-weight: 700;
+
+padding-top: 100px;
+color: #5cb4d1;
+
+    }
