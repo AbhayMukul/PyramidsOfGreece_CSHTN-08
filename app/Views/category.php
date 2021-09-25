@@ -1,3 +1,4 @@
+<?php  $path = "http://localhost/PyramidsOfGreece_CSHTN-08/public"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>category</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/category.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>/static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>/static/css/category.css">
 
 </head>
 <script>
@@ -52,11 +53,11 @@ function med_rec_show_med_hist() {
 	    <div class="dashboard">
 		<br>
 		    <label style="font-size:100px;  background:#95daff; border:2px solid black">P1</label>
-        <p style="margin-top:-100px; margin-left: 180px;"><img style="height:25px;" src="../static/images/location_img.png">Mumbai</p>
-		    <p style="margin-left: 180px;"><img style="height:25px;" src="../static/images/dob_img.png" >18/12/20</p><br>
+        <p style="margin-top:-100px; margin-left: 180px;"><img style="height:25px;" src="<?php echo $path; ?>/static/images/location_img.png">Mumbai</p>
+		    <p style="margin-left: 180px;"><img style="height:25px;" src="<?php echo $path; ?>/static/images/dob_img.png" >18/12/20</p><br>
 		    <p>Name:</p>
-		    <p>Total number of questions attempted: </p>
-		    <p>Total number of questions attempted correctly</p><br><br>
+		    <p>Total number of questions attempted: 2</p>
+		    <p>Total number of questions attempted correctly:2</p><br><br>
 	    </div>
         </div>
         <div id="med_rec_appt_type" class="med_rec_appt_type">
@@ -64,11 +65,47 @@ function med_rec_show_med_hist() {
             <button class="med_rec_show_med_hist" onclick="med_rec_show_med_hist()">Questionaire</button>
         </div>
         <br><br><br>
-        <div class="med_rec_wrapper" id="basic_info" style="display:none;">
+        <div class="med_rec_wrapper" id="basic_info">
           <div class="row">
-            <div class="column3" style="background-color:#fff;">
+            <div class="column3" style="background-color:#fff;" style="display:none;">
               <h2>Course 1 -</h2>
               <p>Basics of HTML</p>
+              <a href="frontend.html"><button class="btn">View Course</button></a>
+             </div>
+          </div>
+        </div>
+          <div class="med_rec_wrapper" id="basic_info">
+          <div class="row">
+             <div class="column3" style="background-color:#fff;" style="display:none;">
+              <h2>Course 2 -</h2>
+              <p>Basics of CSS</p>
+              <a href="frontend.html"><button class="btn">View Course</button></a>
+             </div>
+           </div>
+         </div>
+         <div class="med_rec_wrapper" id="basic_info">
+           <div class="row">
+             <div class="column3" style="background-color:#fff;" style="display:none;">
+              <h2>Course 3 -</h2>
+              <p>Basics of PHP</p>
+              <a href="frontend.html"><button class="btn">View Course</button></a>
+             </div>
+           </div>
+         </div>
+         <div class="med_rec_wrapper" id="basic_info">
+           <div class="row">
+             <div class="column3" style="background-color:#fff;" style="display:none;">
+              <h2>Course 4 -</h2>
+              <p>Basics of Python</p>
+              <a href="<?php echo $path; ?>/public/Editor"><button class="btn">View Course</button></a>
+             </div>
+           </div>
+         </div>
+         <div class="med_rec_wrapper" id="basic_info">
+           <div class="row">
+             <div class="column3" style="background-color:#fff;" style="display:none;">
+              <h2>Course 5 -</h2>
+              <p>Basics of SQL</p>
               <a href="frontend.html"><button class="btn">View Course</button></a>
              </div>
             </div>

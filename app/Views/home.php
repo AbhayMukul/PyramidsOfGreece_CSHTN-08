@@ -1,3 +1,4 @@
+<?php  $path = "http://localhost/PyramidsOfGreece_CSHTN-08/public"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="../static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>/static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $path; ?>/static/css/home.css">
 
 </head>
 
@@ -31,7 +32,7 @@
       <a href="login.html">Login</a>
       </div>
       <div class="hero-image">
-              <img src="../static/images/home.jpg" alt="learning" width=100% height=80%>
+              <img src="<?php echo $path; ?>/static/images/home.jpg" alt="learning" width=100% height=80%>
               <div class="hero-text">
                   <h1 style="font-size:70px;">E-TEACHER</h1>
                   <h2 style="font-size:25px;">EXPLORE YOUR KNOWLEDGE</h2>
@@ -48,7 +49,7 @@
               <center>
                   <div class="row2" id="rcorner">
                       <div class="column2 left2">
-                          <img src="../static/images/images-2.jpg" alt="e leranin icob" class="center">
+                          <img src="<?php echo $path; ?>/static/images/images-2.jpg" alt="e leranin icob" class="center">
                       </div>
                       <div class="column2 right2">
                           <p style="font-size:9px; color:white;">Hello it's me</p>
@@ -91,7 +92,7 @@
                                
                                 <div class="row">
                                     <div class="column">
-                                        <img src="../static/images/imagecont.png" style="width:90%; height: 70%; margin-left: 25px; margin-top: 30px;">
+                                        <img src="<?php echo $path; ?>/static/images/imagecont.png" style="width:90%; height: 70%; margin-left: 25px; margin-top: 30px;">
                                     </div>
                                     <div class="column">
                                         <form action="/contact" method="POST">
