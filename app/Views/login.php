@@ -8,46 +8,46 @@
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+<<<<<<< HEAD
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+=======
     <script>
-        function validateForm()
-        {
-            var username=document.getElementById("username");
-       
-            var password=document.getElementById("password");
-           
-            if(username.value.trim()=="" && password.value.trim()=="") {
-                
+        function validateForm() {
+            var username = document.getElementById("username");
+
+            var password = document.getElementById("password");
+
+            if (username.value.trim() == "" && password.value.trim() == "") {
+
                 alert("Error: Username and Password should be entered");
-                return false;	
+                return false;
             }
-            else
-            {
+            else {
                 true;
             }
-            
-        
-            if(username.value.trim()=="") 
-            {
+
+
+            if (username.value.trim() == "") {
                 alert("Error: Username should not be empty");
-                return false;	
+                return false;
             }
-            else
-            {
+            else {
                 true;
             }
-           if(password.value.trim()==""){
-          
-            
+            if (password.value.trim() == "") {
+
+
                 alert("Error: Password should not be empty");
-                return false;	
+                return false;
             }
-            else
-            {
+            else {
                 true;
             }
-           
+
         }
     </script>
+>>>>>>> origin/saanika
 </head>
 
 <body>
@@ -66,24 +66,54 @@
             </div>
         </div>
         <a href="progress.html">Progress</a>
-      <a href="login.html">Login</a>
-      </div>
+        <a href="login.html">Login</a>
+    </div>
     <div class="login_background">
         <div class="login_container">
             <h1>LOGIN</h1><br>
-            <form method="POST"  onsubmit="return validateForm()">
+<<<<<<< HEAD
+            <form>
+=======
+            <form method="POST" onsubmit="return validateForm()">
+>>>>>>> origin/saanika
                 <label>Username</label><br>
-                <center><input type="text" id ="username" placeholder="Enter your username"  name="username" ></center><br><br>
+                <center><input type="text" id="username" placeholder="Enter your username" name="username"></center>
+                <br><br>
                 <label>Password</label><br>
-                <center><input type="password" id = "password" placeholder="Enter password" name="password"></center><br>
+                <center><input type="password" id="password" placeholder="Enter password" name="password"></center><br>
                 <center>
                     <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
                 </center>
-                <center><button type="submit">Login</button></center>
+                <center><button type="button" onclick="usersignin()">Login</button></center>
             </form>
         </div>
     </div>
-  
+<<<<<<< HEAD
+  <script>
+      function usersignin(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        console.log(username,password)
+        var url = 'http://ec2-3-109-123-120.ap-south-1.compute.amazonaws.com:5000/api/login/';
+            url = url + username + '&' + password;
+            console.log(url)
+        $(function () {
+            $.ajax({
+                type: 'GET',
+                url: url,
+                success: (data) => {
+                    console.log('sucess', data);
+                    $.each(data, (i, item) => {
+                        console.log(item.password);
+                    })
+                }
+            })
+        })
+    }
+  </script>
+=======
+
+>>>>>>> origin/saanika
 </body>
 
 </html>
