@@ -8,10 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../static/css/login.css">
-<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    
-=======
     <script>
         function validateForm() {
             var username = document.getElementById("username");
@@ -47,7 +44,6 @@
 
         }
     </script>
->>>>>>> origin/saanika
 </head>
 
 <body>
@@ -66,16 +62,11 @@
             </div>
         </div>
         <a href="progress.html">Progress</a>
-        <a href="login.html">Login</a>
     </div>
     <div class="login_background">
         <div class="login_container">
             <h1>LOGIN</h1><br>
-<<<<<<< HEAD
-            <form>
-=======
             <form method="POST" onsubmit="return validateForm()">
->>>>>>> origin/saanika
                 <label>Username</label><br>
                 <center><input type="text" id="username" placeholder="Enter your username" name="username"></center>
                 <br><br>
@@ -88,32 +79,29 @@
             </form>
         </div>
     </div>
-<<<<<<< HEAD
-  <script>
-      function usersignin(){
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        console.log(username,password)
-        var url = 'http://ec2-3-109-123-120.ap-south-1.compute.amazonaws.com:5000/api/login/';
+    <script>
+        function usersignin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            console.log(username, password)
+            var url = 'http://ec2-3-109-123-120.ap-south-1.compute.amazonaws.com:5000/api/login/';
             url = url + username + '&' + password;
             console.log(url)
-        $(function () {
-            $.ajax({
-                type: 'GET',
-                url: url,
-                success: (data) => {
-                    console.log('sucess', data);
-                    $.each(data, (i, item) => {
-                        console.log(item.password);
-                    })
-                }
-            })
-        })
-    }
-  </script>
-=======
+            $(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: url,
+                    success: (data) => {
+                        console.log('sucess', data);
 
->>>>>>> origin/saanika
+                        if (data = "logged-in") {
+                            window.open('home.html');
+                        }
+                    }
+                })
+            })
+        }
+    </script>
 </body>
 
 </html>
